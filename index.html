@@ -3,60 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Організація Пласт | Туризм та мандрівки</title>
+  <title>dubove13 | Курінь "Дубове Листя"</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Скидання стилів */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background: #fdfdfd; }
+    body { font-family: 'Montserrat', sans-serif; color: #2c2c2c; line-height: 1.6; background: #f9f9f9; }
     a { text-decoration: none; color: inherit; }
-    /* Головна навігація */
-    header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #e5e5e5; position: sticky; top: 0; }
+    header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #ddd; position: sticky; top: 0; z-index: 100; }
     .nav { display: flex; justify-content: space-between; align-items: center; }
-    .nav__logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
+    .nav__logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; color: #336633; }
     .nav__menu { list-style: none; display: flex; gap: 1.5rem; }
     .nav__menu li:hover { opacity: 0.7; }
-
-    /* Секція Hero */
-    .hero { display: flex; align-items: center; justify-content: center; text-align: center; height: 80vh;
-            background: url('https://source.unsplash.com/1600x900/?forest,hiking') center/cover no-repeat; }
-    .hero__content { background: rgba(255,255,255,0.8); padding: 2rem; max-width: 600px; }
-    .hero__title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+    .hero { display: flex; align-items: center; justify-content: center; text-align: center; height: 75vh;
+            background: url('https://source.unsplash.com/1600x900/?oak,forest') center/cover no-repeat; }
+    .hero__content { background: rgba(255,255,255,0.85); padding: 2rem; max-width: 600px; border-radius: 8px; }
+    .hero__title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #336633; }
     .hero__subtitle { font-size: 1.2rem; }
-
-    /* Секції */
     section { padding: 4rem 2rem; }
     .grid { display: grid; gap: 2rem; }
-
-    /* Про нас */
+    /* Про курінь */
     .about { background: #fff; }
     .about__grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-
-    /* Активності */
-    .activities__grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-    .card { background: #fff; padding: 2rem; border: 1px solid #e5e5e5; border-radius: 8px; text-align: center; transition: transform .2s; }
-    .card:hover { transform: translateY(-5px); }
-    .card__icon { font-size: 2rem; margin-bottom: 1rem; }
-    .card__title { font-weight: 700; margin-bottom: .5rem; }
-
+    /* Статистика */
+    .stats { background: #eef7ee; }
+    .stats__grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; }
+    .stat { padding: 1.5rem; }
+    .stat__number { font-size: 2rem; font-weight: 700; color: #336633; }
+    .stat__label { margin-top: 0.5rem; }
     /* Галерея */
-    .gallery { background: #f5f5f5; }
+    .gallery { background: #fff; }
     .gallery__grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-    .gallery img { width: 100%; height: auto; display: block; border-radius: 4px; }
-
-    /* Футер */
-    footer { background: #333; color: #fff; text-align: center; padding: 2rem; }
-    footer p { font-size: .9rem; }
+    .gallery img { width: 100%; height: auto; display: block; border-radius: 6px; }
+    /* Контакти */
+    footer { background: #2c2c2c; color: #fff; text-align: center; padding: 2rem; }
+    footer p, footer a { font-size: .9rem; color: #ccc; }
+    footer a:hover { color: #fff; }
   </style>
 </head>
 <body>
 
   <header>
     <nav class="nav">
-      <div class="nav__logo">Пласт</div>
+      <div class="nav__logo">dubove13</div>
       <ul class="nav__menu">
-        <li><a href="#about">Про нас</a></li>
-        <li><a href="#activities">Активності</a></li>
+        <li><a href="#about">Про Курінь</a></li>
+        <li><a href="#goals">Мета</a></li>
         <li><a href="#gallery">Галерея</a></li>
         <li><a href="#contact">Контакти</a></li>
       </ul>
@@ -65,63 +56,65 @@
 
   <section class="hero">
     <div class="hero__content">
-      <h1 class="hero__title">Відкрий світ з Пластом</h1>
-      <p class="hero__subtitle">Туризм, спорт, мандрівки та єднання з природою</p>
+      <h1 class="hero__title">Курінь "Дубове Листя" / "Дубова Кора"</h1>
+      <p class="hero__subtitle">УСП для УСП: Плекаємо пластові ідеали старших пластунів</p>
     </div>
   </section>
 
   <section id="about" class="about">
+    <h2 style="text-align:center; margin-bottom:2rem;">Про Курінь</h2>
     <div class="grid about__grid">
       <div>
-        <h2>Наша місія</h2>
-        <p>Розвивати молодь через активний відпочинок, туризм та вивчення навичок виживання.</p>
+        <h3>Назва</h3>
+        <p>«Дубове Листя» (ДЛ) та «Дубова Кора» (УПС ч.13 ім. Володимира Великого)</p>
       </div>
       <div>
-        <h2>Цінності</h2>
-        <p>Відповідальність, сміливість, товариськість та повага до природи.</p>
+        <h3>Стать</h3>
+        <p>Мішаний</p>
+      </div>
+      <div>
+        <h3>Рік заснування</h3>
+        <p>2013</p>
+      </div>
+      <div>
+        <h3>Країна</h3>
+        <p>Україна</p>
       </div>
     </div>
   </section>
 
-  <section id="activities" class="activities">
-    <h2 style="text-align:center; margin-bottom:2rem;">Наші активності</h2>
-    <div class="grid activities__grid">
-      <div class="card">
-        <div class="card__icon">🥾</div>
-        <div class="card__title">Похід</div>
-        <p>Трекінг у горах та лісах України.</p>
+  <section id="goals" class="stats">
+    <h2 style="text-align:center; margin-bottom:2rem;">Наша Місія</h2>
+    <div class="grid stats__grid">
+      <div class="stat">
+        <div class="stat__number">УСП для УСП</div>
+        <div class="stat__label">Робота з уладом старших пластунів</div>
       </div>
-      <div class="card">
-        <div class="card__icon">🏕️</div>
-        <div class="card__title">Кемпінг</div>
-        <p>Навички встановлення табору та орієнтування.</p>
+      <div class="stat">
+        <div class="stat__number">Самовиховання</div>
+        <div class="stat__label">Розвиток методів виховання юнацтва</div>
       </div>
-      <div class="card">
-        <div class="card__icon">🚣</div>
-        <div class="card__title">Рафтинг</div>
-        <p>Сплави річками для справжніх адреналінових випробувань.</p>
-      </div>
-      <div class="card">
-        <div class="card__icon">🔥</div>
-        <div class="card__title">Вогнище</div>
-        <p>Вечірні зустрічі біля вогнища з піснями та історіями.</p>
+      <div class="stat">
+        <div class="stat__number">Пам'ять</div>
+        <div class="stat__label">Відродження історії Пласту</div>
       </div>
     </div>
   </section>
 
   <section id="gallery" class="gallery">
-    <h2 style="text-align:center; margin-bottom:2rem;">Галерея</h2>
+    <h2 style="text-align:center; margin-bottom:2rem;">Галерея Куреня</h2>
     <div class="grid gallery__grid">
-      <img src="https://source.unsplash.com/300x300/?camping" alt="Кемпінг">
-      <img src="https://source.unsplash.com/300x300/?hiking" alt="Похід">
-      <img src="https://source.unsplash.com/300x300/?rafting" alt="Рафтинг">
-      <img src="https://source.unsplash.com/300x300/?campfire" alt="Вогнище">
+      <img src="https://source.unsplash.com/300x300/?oak-leaf" alt="Дубове листя">
+      <img src="https://source.unsplash.com/300x300/?oak-bark" alt="Дубова кора">
+      <img src="https://source.unsplash.com/300x300/?scout-camp" alt="Пластовий табір">
+      <img src="https://source.unsplash.com/300x300/?traditional-embroidery" alt="Вишивка">      
     </div>
   </section>
 
   <footer id="contact">
-    <p>© 2025 Організація Пласт. Всі права захищені.</p>
-    <p>Email: info@plast-ukraine.ua | Телефон: +380 44 123 4567</p>
+    <p>fb: <a href="https://facebook.com/dubove13" target="_blank">dubove13</a> | ig: <a href="https://instagram.com/dubovelystya" target="_blank">dubovelystya</a></p>
+    <p>Email: <a href="mailto:dubove13@gmail.com">dubove13@gmail.com</a></p>
+    <p>© 2013–2025 Курінь «Дубове Листя» / «Дубова Кора»</p>
   </footer>
 
 </body>
