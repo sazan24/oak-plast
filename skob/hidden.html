@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <title>Прихована сторінка</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hidden.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <h2>Це прихована сторінка</h2>
-    <p>☼ Тільки для пластунів-сеньйорів!</p>
-    <br>
-    <img src="kali-geometric.png" alt="Kali Linux geometry art">
+    <!-- CAPTCHA -->
+    <div id="captcha" style="margin-top: 2rem;" class="g-recaptcha"
+         data-callback="recaptchaCallback"
+         data-sitekey="6Le-fzkrAAAAAH8Qp0m8mgb4OW426MzB7xs33Eoq">
+    </div>
+
+    <!-- Прихований контент -->
+    <div id="secret_content" style="display: none;">
+        <h2>Це прихована сторінка</h2>
+        <p>☼ Тільки для пластунів-сеньйорів!</p>
+        <br>
+        <img src="kali-geometric.png" alt="Kali Linux geometry art">
+    </div>
+
+    <script>
+        const content = document.getElementById('secret_content');
+        const captcha = document.getElementById('captcha');
+
+        function recaptchaCallback() {
+            content.style.display = 'block';
+            captcha.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
