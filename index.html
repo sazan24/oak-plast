@@ -2,24 +2,127 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Пласт — українська скаутська організація. Виховує молодь у дусі патріотизму, відповідальності та служіння.">
-  <meta name="keywords" content="Пласт, скаути, Україна, молодь, патріотизм">
-  <title>Пласт — Національна скаутська організація України</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Організація Пласт | Туризм та мандрівки</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Скидання стилів */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background: #fdfdfd; }
+    a { text-decoration: none; color: inherit; }
+    /* Головна навігація */
+    header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #e5e5e5; position: sticky; top: 0; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .nav__logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
+    .nav__menu { list-style: none; display: flex; gap: 1.5rem; }
+    .nav__menu li:hover { opacity: 0.7; }
+
+    /* Секція Hero */
+    .hero { display: flex; align-items: center; justify-content: center; text-align: center; height: 80vh;
+            background: url('https://source.unsplash.com/1600x900/?forest,hiking') center/cover no-repeat; }
+    .hero__content { background: rgba(255,255,255,0.8); padding: 2rem; max-width: 600px; }
+    .hero__title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+    .hero__subtitle { font-size: 1.2rem; }
+
+    /* Секції */
+    section { padding: 4rem 2rem; }
+    .grid { display: grid; gap: 2rem; }
+
+    /* Про нас */
+    .about { background: #fff; }
+    .about__grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+    /* Активності */
+    .activities__grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .card { background: #fff; padding: 2rem; border: 1px solid #e5e5e5; border-radius: 8px; text-align: center; transition: transform .2s; }
+    .card:hover { transform: translateY(-5px); }
+    .card__icon { font-size: 2rem; margin-bottom: 1rem; }
+    .card__title { font-weight: 700; margin-bottom: .5rem; }
+
+    /* Галерея */
+    .gallery { background: #f5f5f5; }
+    .gallery__grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .gallery img { width: 100%; height: auto; display: block; border-radius: 4px; }
+
+    /* Футер */
+    footer { background: #333; color: #fff; text-align: center; padding: 2rem; }
+    footer p { font-size: .9rem; }
+  </style>
 </head>
 <body>
-  <header><h1>Пласт — український скаутинг</h1></header>
-  <nav>
-    <a href="index.html">Головна</a>
-    <a href="about.html">Про Пласт</a>
-    <a href="contact.html">Контакти</a>
-  </nav>
-  <main>
-    <section>
-      <h2>Що таке Пласт?</h2>
-      <p>Пласт — найбільша українська скаутська організація. Мета — виховання молоді як свідомих, відповідальних громадян.</p>
-    </section>
-  </main>
-  <footer>© 2025 Пласт</footer>
+
+  <header>
+    <nav class="nav">
+      <div class="nav__logo">Пласт</div>
+      <ul class="nav__menu">
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#activities">Активності</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#contact">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Відкрий світ з Пластом</h1>
+      <p class="hero__subtitle">Туризм, спорт, мандрівки та єднання з природою</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="grid about__grid">
+      <div>
+        <h2>Наша місія</h2>
+        <p>Розвивати молодь через активний відпочинок, туризм та вивчення навичок виживання.</p>
+      </div>
+      <div>
+        <h2>Цінності</h2>
+        <p>Відповідальність, сміливість, товариськість та повага до природи.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" class="activities">
+    <h2 style="text-align:center; margin-bottom:2rem;">Наші активності</h2>
+    <div class="grid activities__grid">
+      <div class="card">
+        <div class="card__icon">🥾</div>
+        <div class="card__title">Похід</div>
+        <p>Трекінг у горах та лісах України.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon">🏕️</div>
+        <div class="card__title">Кемпінг</div>
+        <p>Навички встановлення табору та орієнтування.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon">🚣</div>
+        <div class="card__title">Рафтинг</div>
+        <p>Сплави річками для справжніх адреналінових випробувань.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon">🔥</div>
+        <div class="card__title">Вогнище</div>
+        <p>Вечірні зустрічі біля вогнища з піснями та історіями.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2 style="text-align:center; margin-bottom:2rem;">Галерея</h2>
+    <div class="grid gallery__grid">
+      <img src="https://source.unsplash.com/300x300/?camping" alt="Кемпінг">
+      <img src="https://source.unsplash.com/300x300/?hiking" alt="Похід">
+      <img src="https://source.unsplash.com/300x300/?rafting" alt="Рафтинг">
+      <img src="https://source.unsplash.com/300x300/?campfire" alt="Вогнище">
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 Організація Пласт. Всі права захищені.</p>
+    <p>Email: info@plast-ukraine.ua | Телефон: +380 44 123 4567</p>
+  </footer>
+
 </body>
 </html>
