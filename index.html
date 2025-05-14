@@ -2,81 +2,139 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Курінь "Дубове Листя / Дубова Кора" — dubove13</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дубове Листя</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      margin: 0;
+      background-color: #f4f3ef;
+      color: #333;
+    }
+    header {
+      background-color: #3d5a40;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      color: #2c3e2f;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    .contact {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+    }
+    footer {
+      background-color: #2f4633;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #8fd19e;
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body class="bg-green-50 text-gray-800 font-sans">
-  <header class="bg-green-900 text-white py-6 shadow-lg">
-    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <img src="45f86246-3510-4e3a-bb64-920a682dcf6f.png" alt="Емблема" class="w-16 h-16"/>
-        <div>
-          <h1 class="text-2xl font-bold">Дубове Листя / Дубова Кора</h1>
-          <p class="text-sm">Курінь УСП/УПС ч.13</p>
-        </div>
-      </div>
-      <nav class="space-x-4 text-sm">
-        <a href="#about" class="hover:underline">Про нас</a>
-        <a href="#activities" class="hover:underline">Активності</a>
-        <a href="#contacts" class="hover:underline">Контакти</a>
-      </nav>
-    </div>
+<body>
+  <header>
+    <img src="./dl-logo.png" alt="Емблема куреня Дубове Листя" />
+    <h1>Курінь УСП/УПС «Дубове Листя / Дубова Кора»</h1>
+    <div class="subtitle">dubove13 — Пластовий шлях самовиховання</div>
   </header>
 
-  <section class="py-10 bg-gradient-to-b from-green-100 to-green-50" id="about">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4 text-green-800">Про курінь</h2>
-      <p class="mb-4">Курінь «Дубове Листя» (УСП) / «Дубова Кора» (УПС) — це простір розвитку, натхнення та служіння. Наша мета — реалізація ідеї «УСП для УСП», підтримка старших пластунів та передача досвіду новим членам організації.</p>
-      <p class="mb-4">Ми зберігаємо пластову ідею, традиції, виховуємо молодь і плекаємо пам'ять про курені, які діяли у складні часи — зокрема про курінь ч.13 ім. Володимира Великого.</p>
-      <ul class="text-left list-disc pl-6 mt-6">
-        <li><strong>Стать:</strong> мішаний</li>
-        <li><strong>Рік заснування:</strong> 2013</li>
-        <li><strong>Хустка:</strong> зелена лляна, з вишитим дубовим листочком і бронзовим кантом після отримання числа</li>
-        <li><strong>Країни діяльності:</strong> Україна</li>
-      </ul>
-    </div>
+  <section class="section">
+    <h2>Про курінь</h2>
+    <p>
+      Основна мета куреня — «УСП для УСП», тобто спрямування діяльності на роботу з уладом старших пластунів. 
+      Це дозволяє якісно впливати на самовиховання української молоді, підтримувати та розвивати методи роботи зі старшими пластунами, які щойно долучаються до організації, а також із тими, хто перейшов із юнацтва.
+    </p>
+    <p>
+      Курінь активно плекатиме пластові ідеали та історію. Ми відроджуємо пам’ять про з’єднання, які в складні часи зберегли вірність пластовій ідеї, зокрема про курінь УПС «Дубова кора» та курінь ч.13 ім. Володимира Великого.
+    </p>
   </section>
 
-  <section id="activities" class="py-12 bg-white">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-green-800 mb-10">Наші активності</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
-          <img src="https://img.icons8.com/color/96/hiking-boot.png" alt="Похід" class="mx-auto mb-2 w-12 h-12"/>
-          <h3 class="font-semibold text-lg mb-2">Похід</h3>
-          <p>Трекінг у горах та лісах України.</p>
-        </div>
-        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
-          <img src="https://img.icons8.com/color/96/camping-tent.png" alt="Кемпінг" class="mx-auto mb-2 w-12 h-12"/>
-          <h3 class="font-semibold text-lg mb-2">Кемпінг</h3>
-          <p>Навички встановлення табору та орієнтування.</p>
-        </div>
-        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
-          <img src="https://img.icons8.com/color/96/kayak.png" alt="Рафтинг" class="mx-auto mb-2 w-12 h-12"/>
-          <h3 class="font-semibold text-lg mb-2">Рафтинг</h3>
-          <p>Сплави річками для справжніх адреналінових випробувань.</p>
-        </div>
-        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
-          <img src="https://img.icons8.com/color/96/campfire.png" alt="Вогнище" class="mx-auto mb-2 w-12 h-12"/>
-          <h3 class="font-semibold text-lg mb-2">Вогнище</h3>
-          <p>Вечірні зустрічі біля вогнища з піснями та історіями.</p>
-        </div>
+  <section class="section">
+    <h2>Наші активності</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197560.png" alt="Похід">
+        <h3>Похід</h3>
+        <p>Трекінг у горах та лісах України.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Кемпінг">
+        <h3>Кемпінг</h3>
+        <p>Навички встановлення табору та орієнтування.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995501.png" alt="Рафтинг">
+        <h3>Рафтинг</h3>
+        <p>Сплави річками для справжніх адреналінових випробувань.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3176/3176297.png" alt="Вогнище">
+        <h3>Вогнище</h3>
+        <p>Вечірні зустрічі біля вогнища з піснями та історіями.</p>
       </div>
     </div>
   </section>
 
-  <section class="py-12 bg-green-800 text-white" id="contacts">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Контакти</h2>
-      <p class="mb-2"><strong>Facebook:</strong> <a href="https://facebook.com/dubove13" class="underline">dubove13</a></p>
-      <p class="mb-2"><strong>Instagram:</strong> <a href="https://instagram.com/dubovelystya" class="underline">@dubovelystya</a></p>
-      <p class="mb-2"><strong>Email:</strong> <a href="mailto:dubove13@gmail.com" class="underline">dubove13@gmail.com</a></p>
-    </div>
+  <section class="section">
+    <h2>Атрибутика</h2>
+    <p>
+      Хустка: чотирикутна, 75 см, з лляної тканини зеленого кольору. Один з кутків має вишитий дубовий листок з жолудем (6,5 см). Після отримання числа наноситься бронзовий кант (1,3 см).
+    </p>
   </section>
 
-  <footer class="text-center py-4 text-sm bg-green-950 text-gray-200">
-    &copy; 2025 Курінь «Дубове Листя / Дубова Кора». Всі права захищені.
+  <section class="section contact">
+    <h2>Контакти</h2>
+    <p>📧 <a href="mailto:dubove13@gmail.com">dubove13@gmail.com</a></p>
+    <p>📘 <a href="https://facebook.com/dubove13" target="_blank">facebook.com/dubove13</a></p>
+    <p>📷 <a href="https://instagram.com/dubovelystya" target="_blank">@dubovelystya</a></p>
+  </section>
+
+  <footer>
+    © 2013–2025 Курінь «Дубове Листя / Дубова Кора» | Україна
   </footer>
 </body>
 </html>
