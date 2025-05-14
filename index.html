@@ -3,120 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Дубове листя</title>
+  <title>Курінь "Дубове Листя"</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #336633;
+      --accent: #ffc107;
+      --bg-light: #f9f9f9;
+      --bg-dark: #1a1a1a;
+      --text-light: #fff;
+      --text-dark: #2c2c2c;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Montserrat', sans-serif; color: #2c2c2c; line-height: 1.6; background: #f9f9f9; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-light);
+      line-height: 1.6;
+      transition: background .3s, color .3s;
+    }
+    .dark {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
     a { text-decoration: none; color: inherit; }
-    header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #ddd; position: sticky; top: 0; z-index: 100; }
-    .nav { display: flex; justify-content: space-between; align-items: center; }
-    .nav__logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; color: #336633; }
-    .nav__logo img { max-width: 150px; height: auto; }
-    .nav__menu { list-style: none; display: flex; gap: 1.5rem; }
-    .nav__menu li:hover { opacity: 0.7; }
-    .hero { display: flex; align-items: center; justify-content: center; text-align: center; height: 75vh;
-            background: url('dl-bg.png') center/cover no-repeat; }
-    .hero__content { background: rgba(255,255,255,0.85); padding: 2rem; max-width: 600px; border-radius: 8px; }
-    .hero__title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #336633; }
-    .hero__subtitle { font-size: 1.2rem; }
-    section { padding: 4rem 2rem; }
-    .grid { display: grid; gap: 2rem; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: url('dl-bg.png') center/cover no-repeat;
+      padding: 1rem 2rem;
+      display: flex; flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav__logo img { max-width: 120px; }
+    .nav__menu {
+      list-style: none; display: flex; gap: 1rem;
+    }
+    .nav__menu li a:hover { color: var(--accent); }
+    .toggle-dark {
+      background: none; border: 2px solid var(--accent);
+      padding: .3rem .6rem; border-radius: 4px; cursor: pointer;
+      font-size: .9rem; color: var(--accent);
+      transition: background .3s, color .3s;
+    }
+    .toggle-dark:hover { background: var(--accent); color: var(--primary); }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .hero__title {
+      font-size: 3rem; color: var(--text-light);
+      text-shadow: 2px 2px 8px rgba(0,0,0,.5);
+    }
+    .hero__subtitle {
+      font-size: 1.25rem; margin-top: .5rem;
+      color: var(--text-light);
+      opacity: .9;
+    }
+
+    section { padding: 4rem 2rem; max-width: 1024px; margin: auto; }
+    h2 { margin-bottom: 1.5rem; font-size: 2rem; color: var(--primary); text-align: center; }
+    .grid { display: grid; gap: 1.5rem; }
+
     /* Про курінь */
-    .about { background: #fff; }
-    .about__grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    /* Статистика */
-    .stats { background: #eef7ee; }
+    .about__grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .about__grid div p { margin-top: .5rem; font-weight: 500; }
+
+    /* Місія */
     .stats__grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; }
-    .stat { padding: 1.5rem; }
-    .stat__number { font-size: 2rem; font-weight: 700; color: #336633; }
-    .stat__label { margin-top: 0.5rem; }
+    .stat { background: var(--bg-light); padding: 1.5rem; border-radius: 6px; transition: transform .3s; }
+    .stat:hover { transform: translateY(-5px); }
+    .stat__emoji { font-size: 2rem; }
+    .stat__number { font-size: 1.5rem; margin: .5rem 0; color: var(--primary); }
+
     /* Галерея */
-    .gallery { background: #fff; }
     .gallery__grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-    .gallery img { width: 100%; height: auto; display: block; border-radius: 6px; }
+    .gallery img { width: 100%; height: auto; border-radius: 6px; }
+
     /* Контакти */
-    footer { background: #2c2c2c; color: #fff; text-align: center; padding: 2rem; }
-    footer p, footer a { font-size: .9rem; color: #ccc; }
-    footer a:hover { color: #fff; }
+    footer { background: var(--primary); color: var(--text-light); text-align: center; padding: 2rem; }
+    footer a { color: var(--accent); }
+    footer a:hover { opacity: .8; }
   </style>
 </head>
 <body>
-
   <header>
     <nav class="nav">
       <div class="nav__logo"><img src="dl-logo.jpg" alt="Дубове Листя"></div>
       <ul class="nav__menu">
-        <li><a href="#about">Про Курінь</a></li>
-        <li><a href="#goals">Мета</a></li>
-        <li><a href="#gallery">Галерея</a></li>
-        <li><a href="#contact">Контакти</a></li>
+        <li><a href="#about">📖 Про Курінь</a></li>
+        <li><a href="#goals">🎯 Мета</a></li>
+        <li><a href="#history">📜 Історія</a></li>
+        <li><a href="#gallery">🖼 Галерея</a></li>
+        <li><a href="#contact">✉️ Контакти</a></li>
       </ul>
+      <button class="toggle-dark" onclick="document.body.classList.toggle('dark')">🌙 Темна тема</button>
     </nav>
 
-  <section class="hero">
-    <div class="hero__content">
+    <section class="hero">
       <h1 class="hero__title">Курінь "Дубове Листя"</h1>
       <p class="hero__subtitle">УСП: Плекаємо пластові ідеали старших пластунів</p>
-    </div>
-  </section>
-</header>
+    </section>
+  </header>
 
   <section id="about" class="about">
-    <h2 style="text-align:center; margin-bottom:2rem;">Про Курінь</h2>
+    <h2>Про Курінь</h2>
     <div class="grid about__grid">
-      <div>
-        <h3>Назва</h3>
-        <p>«Дубове Листя» (ДЛ)</p>
-      </div>
-      <div>
-        <h3>Стать</h3>
-        <p>Мішаний</p>
-      </div>
-      <div>
-        <h3>Рік заснування</h3>
-        <p>2013</p>
-      </div>
-      <div>
-        <h3>Країна</h3>
-        <p>Україна</p>
-      </div>
+      <div><h3>Назва</h3><p>«Дубове Листя» (ДЛ)</p></div>
+      <div><h3>Стать</h3><p>Мішаний</p></div>
+      <div><h3>Засновано</h3><p>2009 (відновлено 2013)</p></div>
+      <div><h3>Штаб-квартира</h3><p>Житомир, Україна</p></div>
     </div>
   </section>
 
   <section id="goals" class="stats">
-    <h2 style="text-align:center; margin-bottom:2rem;">Наша Місія</h2>
+    <h2>🎯 Наша Місія</h2>
     <div class="grid stats__grid">
-      <div class="stat">
-        <div class="stat__number">УСП для УСП</div>
-        <div class="stat__label">Робота з уладом старших пластунів</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">Самовиховання</div>
-        <div class="stat__label">Розвиток методів виховання юнацтва</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">Пам'ять</div>
-        <div class="stat__label">Відродження історії Пласту</div>
-      </div>
+      <div class="stat"><div class="stat__emoji">🤝</div><div class="stat__number">УСП для УСП</div><div class="stat__label">Робота з уладом старших пластунів</div></div>
+      <div class="stat"><div class="stat__emoji">🧠</div><div class="stat__number">Самовиховання</div><div class="stat__label">Розвиток методів виховання</div></div>
+      <div class="stat"><div class="stat__emoji">📚</div><div class="stat__number">Пам'ять</div><div class="stat__label">Відродження історії Пласту</div></div>
     </div>
   </section>
 
+  <section id="history">
+    <h2>📜 Історія Куреня</h2>
+    <p>Курінь УСП «Дубове Листя» імені Святого Рівноапостольного князя Володимира Великого засновано у 2009 році в Житомирі та офіційно відновлено 13 січня 2013 року. Мішаний підготовчий пластовий курінь здійснює діяльність за традиційними цінностями, проводить вишколы, табори та історико-краєзнавчі мандрівки.</p>
+  </section>
+
   <section id="gallery" class="gallery">
-    <h2 style="text-align:center; margin-bottom:2rem;">Галерея Куреня</h2>
+    <h2>🖼 Галерея Куреня</h2>
     <div class="grid gallery__grid">
       <img src="https://source.unsplash.com/300x300/?oak-leaf" alt="Дубове листя">
-      <img src="https://source.unsplash.com/300x300/?oak-bark" alt="Дубова кора">
       <img src="https://source.unsplash.com/300x300/?scout-camp" alt="Пластовий табір">
-      <img src="https://source.unsplash.com/300x300/?traditional-embroidery" alt="Вишивка">      
+      <img src="https://source.unsplash.com/300x300/?traditional-embroidery" alt="Вишивка">
+      <img src="https://source.unsplash.com/300x300/?campfire" alt="Вишкіл">
     </div>
   </section>
 
   <footer id="contact">
-    <p>fb: <a href="https://facebook.com/dubove13" target="_blank">dubove13</a> | ig: <a href="https://instagram.com/dubovelystya" target="_blank">dubovelystya</a></p>
-    <p>Email: <a href="mailto:dubove13@gmail.com">dubove13@gmail.com</a></p>
-    <p>© 2013–2025 Курінь «Дубове Листя» / «Дубова Кора»</p>
+    <p>📌 <a href="https://facebook.com/dubove13" target="_blank">Facebook</a> | <a href="https://instagram.com/dubovelystya" target="_blank">Instagram</a></p>
+    <p>✉️ <a href="mailto:dubove13@gmail.com">dubove13@gmail.com</a></p>
+    <p>© 2009–2025 Курінь «Дубове Листя»</p>
   </footer>
-
 </body>
 </html>
