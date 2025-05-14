@@ -1,121 +1,82 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>dubove13 | Курінь "Дубове Листя"</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Montserrat', sans-serif; color: #2c2c2c; line-height: 1.6; background: #f9f9f9; }
-    a { text-decoration: none; color: inherit; }
-    header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #ddd; position: sticky; top: 0; z-index: 100; }
-    .nav { display: flex; justify-content: space-between; align-items: center; }
-    .nav__logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; color: #336633; }
-    .nav__menu { list-style: none; display: flex; gap: 1.5rem; }
-    .nav__menu li:hover { opacity: 0.7; }
-    .hero { display: flex; align-items: center; justify-content: center; text-align: center; height: 75vh;
-            background: url('https://source.unsplash.com/1600x900/?oak,forest') center/cover no-repeat; }
-    .hero__content { background: rgba(255,255,255,0.85); padding: 2rem; max-width: 600px; border-radius: 8px; }
-    .hero__title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #336633; }
-    .hero__subtitle { font-size: 1.2rem; }
-    section { padding: 4rem 2rem; }
-    .grid { display: grid; gap: 2rem; }
-    /* Про курінь */
-    .about { background: #fff; }
-    .about__grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    /* Статистика */
-    .stats { background: #eef7ee; }
-    .stats__grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; }
-    .stat { padding: 1.5rem; }
-    .stat__number { font-size: 2rem; font-weight: 700; color: #336633; }
-    .stat__label { margin-top: 0.5rem; }
-    /* Галерея */
-    .gallery { background: #fff; }
-    .gallery__grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-    .gallery img { width: 100%; height: auto; display: block; border-radius: 6px; }
-    /* Контакти */
-    footer { background: #2c2c2c; color: #fff; text-align: center; padding: 2rem; }
-    footer p, footer a { font-size: .9rem; color: #ccc; }
-    footer a:hover { color: #fff; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Курінь "Дубове Листя / Дубова Кора" — dubove13</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-  <header>
-    <nav class="nav">
-      <div class="nav__logo">dubove13</div>
-      <ul class="nav__menu">
-        <li><a href="#about">Про Курінь</a></li>
-        <li><a href="#goals">Мета</a></li>
-        <li><a href="#gallery">Галерея</a></li>
-        <li><a href="#contact">Контакти</a></li>
-      </ul>
-    </nav>
+<body class="bg-green-50 text-gray-800 font-sans">
+  <header class="bg-green-900 text-white py-6 shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="45f86246-3510-4e3a-bb64-920a682dcf6f.png" alt="Емблема" class="w-16 h-16"/>
+        <div>
+          <h1 class="text-2xl font-bold">Дубове Листя / Дубова Кора</h1>
+          <p class="text-sm">Курінь УСП/УПС ч.13</p>
+        </div>
+      </div>
+      <nav class="space-x-4 text-sm">
+        <a href="#about" class="hover:underline">Про нас</a>
+        <a href="#activities" class="hover:underline">Активності</a>
+        <a href="#contacts" class="hover:underline">Контакти</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero__content">
-      <h1 class="hero__title">Курінь "Дубове Листя" / "Дубова Кора"</h1>
-      <p class="hero__subtitle">УСП для УСП: Плекаємо пластові ідеали старших пластунів</p>
+  <section class="py-10 bg-gradient-to-b from-green-100 to-green-50" id="about">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-green-800">Про курінь</h2>
+      <p class="mb-4">Курінь «Дубове Листя» (УСП) / «Дубова Кора» (УПС) — це простір розвитку, натхнення та служіння. Наша мета — реалізація ідеї «УСП для УСП», підтримка старших пластунів та передача досвіду новим членам організації.</p>
+      <p class="mb-4">Ми зберігаємо пластову ідею, традиції, виховуємо молодь і плекаємо пам'ять про курені, які діяли у складні часи — зокрема про курінь ч.13 ім. Володимира Великого.</p>
+      <ul class="text-left list-disc pl-6 mt-6">
+        <li><strong>Стать:</strong> мішаний</li>
+        <li><strong>Рік заснування:</strong> 2013</li>
+        <li><strong>Хустка:</strong> зелена лляна, з вишитим дубовим листочком і бронзовим кантом після отримання числа</li>
+        <li><strong>Країни діяльності:</strong> Україна</li>
+      </ul>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2 style="text-align:center; margin-bottom:2rem;">Про Курінь</h2>
-    <div class="grid about__grid">
-      <div>
-        <h3>Назва</h3>
-        <p>«Дубове Листя» (ДЛ) та «Дубова Кора» (УПС ч.13 ім. Володимира Великого)</p>
-      </div>
-      <div>
-        <h3>Стать</h3>
-        <p>Мішаний</p>
-      </div>
-      <div>
-        <h3>Рік заснування</h3>
-        <p>2013</p>
-      </div>
-      <div>
-        <h3>Країна</h3>
-        <p>Україна</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="goals" class="stats">
-    <h2 style="text-align:center; margin-bottom:2rem;">Наша Місія</h2>
-    <div class="grid stats__grid">
-      <div class="stat">
-        <div class="stat__number">УСП для УСП</div>
-        <div class="stat__label">Робота з уладом старших пластунів</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">Самовиховання</div>
-        <div class="stat__label">Розвиток методів виховання юнацтва</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">Пам'ять</div>
-        <div class="stat__label">Відродження історії Пласту</div>
+  <section id="activities" class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-green-800 mb-10">Наші активності</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
+          <img src="https://img.icons8.com/color/96/hiking-boot.png" alt="Похід" class="mx-auto mb-2 w-12 h-12"/>
+          <h3 class="font-semibold text-lg mb-2">Похід</h3>
+          <p>Трекінг у горах та лісах України.</p>
+        </div>
+        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
+          <img src="https://img.icons8.com/color/96/camping-tent.png" alt="Кемпінг" class="mx-auto mb-2 w-12 h-12"/>
+          <h3 class="font-semibold text-lg mb-2">Кемпінг</h3>
+          <p>Навички встановлення табору та орієнтування.</p>
+        </div>
+        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
+          <img src="https://img.icons8.com/color/96/kayak.png" alt="Рафтинг" class="mx-auto mb-2 w-12 h-12"/>
+          <h3 class="font-semibold text-lg mb-2">Рафтинг</h3>
+          <p>Сплави річками для справжніх адреналінових випробувань.</p>
+        </div>
+        <div class="bg-green-100 rounded-2xl shadow-md p-6 text-center">
+          <img src="https://img.icons8.com/color/96/campfire.png" alt="Вогнище" class="mx-auto mb-2 w-12 h-12"/>
+          <h3 class="font-semibold text-lg mb-2">Вогнище</h3>
+          <p>Вечірні зустрічі біля вогнища з піснями та історіями.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="gallery" class="gallery">
-    <h2 style="text-align:center; margin-bottom:2rem;">Галерея Куреня</h2>
-    <div class="grid gallery__grid">
-      <img src="https://source.unsplash.com/300x300/?oak-leaf" alt="Дубове листя">
-      <img src="https://source.unsplash.com/300x300/?oak-bark" alt="Дубова кора">
-      <img src="https://source.unsplash.com/300x300/?scout-camp" alt="Пластовий табір">
-      <img src="https://source.unsplash.com/300x300/?traditional-embroidery" alt="Вишивка">      
+  <section class="py-12 bg-green-800 text-white" id="contacts">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Контакти</h2>
+      <p class="mb-2"><strong>Facebook:</strong> <a href="https://facebook.com/dubove13" class="underline">dubove13</a></p>
+      <p class="mb-2"><strong>Instagram:</strong> <a href="https://instagram.com/dubovelystya" class="underline">@dubovelystya</a></p>
+      <p class="mb-2"><strong>Email:</strong> <a href="mailto:dubove13@gmail.com" class="underline">dubove13@gmail.com</a></p>
     </div>
   </section>
 
-  <footer id="contact">
-    <p>fb: <a href="https://facebook.com/dubove13" target="_blank">dubove13</a> | ig: <a href="https://instagram.com/dubovelystya" target="_blank">dubovelystya</a></p>
-    <p>Email: <a href="mailto:dubove13@gmail.com">dubove13@gmail.com</a></p>
-    <p>© 2013–2025 Курінь «Дубове Листя» / «Дубова Кора»</p>
+  <footer class="text-center py-4 text-sm bg-green-950 text-gray-200">
+    &copy; 2025 Курінь «Дубове Листя / Дубова Кора». Всі права захищені.
   </footer>
-
 </body>
 </html>
