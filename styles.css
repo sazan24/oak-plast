@@ -16,17 +16,11 @@ header {
     color: #fff;
     padding: 1rem 0;
     display: flex;
-    justify-content: center; /* Центрує .header-inner по горизонталі */
-}
-
-.header-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
 }
 
 .logo {
+    justify-content: center;
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
