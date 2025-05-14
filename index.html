@@ -12,10 +12,11 @@
     header { background: #fff; padding: 1rem 2rem; border-bottom: 2px solid #ddd; position: sticky; top: 0; z-index: 100; }
     .nav { display: flex; justify-content: space-between; align-items: center; }
     .nav__logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; color: #336633; }
+    .nav__logo img { max-width: 150px; height: auto; }
     .nav__menu { list-style: none; display: flex; gap: 1.5rem; }
     .nav__menu li:hover { opacity: 0.7; }
     .hero { display: flex; align-items: center; justify-content: center; text-align: center; height: 75vh;
-            background: url('https://source.unsplash.com/1600x900/?oak,forest') center/cover no-repeat; }
+            background: url('dl-bg.png') center/cover no-repeat; }
     .hero__content { background: rgba(255,255,255,0.85); padding: 2rem; max-width: 600px; border-radius: 8px; }
     .hero__title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #336633; }
     .hero__subtitle { font-size: 1.2rem; }
@@ -44,7 +45,7 @@
 
   <header>
     <nav class="nav">
-      <div class="nav__logo">dubove13</div>
+      <div class="nav__logo"><img src="dl-logo.jpg" alt="Дубове Листя"></div>
       <ul class="nav__menu">
         <li><a href="#about">Про Курінь</a></li>
         <li><a href="#goals">Мета</a></li>
